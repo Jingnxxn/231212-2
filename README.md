@@ -1,7 +1,5 @@
 # 231212-2
 ---
-1. 먼저 BgLabelControl 사용자 지정 컨트롤 클래스 구현해준다.
-2. 그 다음 BgLabelControl.idl에 static Microsoft.UI.Xaml.DependencyProperty LabelProperty{ get; }; String Label;을 추가한다.
 
 - BgLabelControl.idl
 ```ruby
@@ -19,7 +17,7 @@ namespace BgLabelControlApp
     }
 }
 ```
-3. BgLabelControl.cpp에 아래와 같이 코드를 넣는다.
+
 - BgLabelControl.cpp
 ```ruby
 // Copyright (c) Microsoft Corporation and Contributors.
@@ -54,7 +52,7 @@ namespace winrt::BgLabelControlApp::implementation
     }
 }
 ```
-4. BgLabelControl.h를 아래와 같이 코드를 추가한다. 여기서 #include "BgLabelControl.g.h" 헤더파일도 추가한다.
+
 - BgLabelControl.h
 ```ruby
 // Copyright (c) Microsoft Corporation and Contributors.
@@ -99,8 +97,7 @@ namespace winrt::BgLabelControlApp::factory_implementation
     };
 }
 ```
-5. pch.hdp #include <winrt/Windows.UI.Xaml.Interop.h>를 추가한다.
-6. Generic.Xaml에 다음과 같이 코드를 작성한다.
+
 - Generic.Xaml
 ```ruby
 <!-- \Themes\Generic.xaml -->
@@ -122,7 +119,7 @@ namespace winrt::BgLabelControlApp::factory_implementation
     </Style>
 </ResourceDictionary>
 ```
-7. MainWindow.Xaml에 내가 원하는 배경색과 문구를 정해 StackPanel에 넣는다.
+
 - MainWindow.Xaml
 ```ruby
 <?xml version="1.0" encoding="utf-8"?>
@@ -141,7 +138,7 @@ namespace winrt::BgLabelControlApp::factory_implementation
     </StackPanel>
 </Window>
 ```
-7. MainWindow.Xaml에 다음 헤더파일 ( #include "BgLabelControl.h" )을 넣는다.
+
 
 -> 실행화면 : 
 ![image](https://github.com/Jingnxxn/231212-2/assets/96435960/be4a75b1-fed1-4352-9ec5-b27e44a65586)
