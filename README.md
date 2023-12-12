@@ -110,7 +110,7 @@ namespace winrt::BgLabelControlApp::factory_implementation
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:BgLabelControl">
-                    <Grid Width="100" Height="100" Background="{TemplateBinding Background}">
+                    <Grid Width="500" Height="500" Background="{TemplateBinding Background}">
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{TemplateBinding Label}"/>
                     </Grid>
                 </ControlTemplate>
@@ -134,12 +134,12 @@ namespace winrt::BgLabelControlApp::factory_implementation
 
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-        <local:BgLabelControl Background="Red" Width="500" Height="500"/>
+        <local:BgLabelControl Background="Red"/>
     </StackPanel>
 </Window>
 ```
 
 
 -> 실행화면 : 
-![image](https://github.com/Jingnxxn/231212-2/assets/96435960/be4a75b1-fed1-4352-9ec5-b27e44a65586)
+![image](https://github.com/Jingnxxn/231212-2/assets/96435960/44747a4f-3849-4cb0-8215-3c302965b298)
 
